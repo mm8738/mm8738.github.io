@@ -1,0 +1,99 @@
+.cursor-sparkle {
+  position: fixed;
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  transform: translate(-50%, -50%);
+
+  animation: sparkle-fade 700ms ease-out forwards;
+}
+
+
+/* Vertical diamond */
+
+.cursor-sparkle::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 35%;
+  height: 100%;
+
+  background: currentColor;
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
+}
+
+
+/* Horizontal diamond */
+
+.cursor-sparkle::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  height: 35%;
+
+  background: currentColor;
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg);
+}
+
+
+@keyframes sparkle-fade {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0);
+  }
+
+  20% {
+    opacity: 0.9;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate(
+        calc(-50% + var(--sparkle-x)),
+        calc(-50% + var(--sparkle-y))
+      )
+      scale(0.25)
+      rotate(35deg);
+  }
+
+}
+
+
+/* Respect accessibility preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-sparkle {
+    display: none;
+  }
+}

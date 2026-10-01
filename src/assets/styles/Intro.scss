@@ -1,0 +1,557 @@
+.intro {
+  position: relative;
+
+  display: block;
+
+  min-height: 540px;
+
+  padding: 85px 40px 65px;
+
+  overflow: hidden;
+}
+
+
+/* ===============================
+   TEXT
+   =============================== */
+
+.intro-copy {
+  position: relative;
+  z-index: 2;
+
+  width: min(650px, 72%);
+}
+.intro h2 {
+  max-width: 650px;
+
+  margin: 22px 0 18px;
+
+  font-size: clamp(2.8rem, 4.4vw, 4.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: var(--accent);
+
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  font-weight: 500;
+
+  letter-spacing: 0.15em;
+}
+
+.intro h1 {
+  margin: 0;
+
+  color: var(--ink);
+
+  font-size: clamp(2.4rem, 4vw, 3.7rem);
+  font-weight: 500;
+
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.intro-subtitle {
+  margin: 16px 0 0;
+
+  color: var(--ink);
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.intro-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  gap: 7px;
+
+  margin: 18px 0 0;
+}
+
+.intro-tags span {
+  padding: 6px 10px;
+
+  color: var(--accent);
+
+  background: var(--tag);
+
+  border-radius: 999px;
+
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+/* ===============================
+   CTA
+   =============================== */
+
+.intro-action-row {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  margin-top: 25px;
+}
+
+.primary-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 18px;
+
+  color: #fff;
+
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--rose)
+  );
+
+  border-radius: 7px;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(185, 101, 122, 0.18);
+}
+
+.mail-icon {
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+/* ===============================
+   DATA ILLUSTRATION
+   =============================== */
+
+.intro-visual {
+  position: absolute;
+
+  top: 22px;
+  right: 28px;
+
+  width: 245px;
+  height: 145px;
+
+  margin: 0;
+
+  pointer-events: none;
+}
+
+.visual-window {
+  position: absolute;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid var(--border);
+  border-radius: 5px;
+
+  box-shadow: 0 6px 18px rgba(37, 43, 51, 0.07);
+}
+
+
+/* BAR CHART */
+
+.visual-bars {
+  top: 0px;
+  left: 10px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 7px;
+
+  width: 120px;
+  height: 82px;
+
+  padding: 20px 18px 14px;
+}
+
+.visual-bars span {
+  flex: 1;
+
+  background: var(--accent-bright);
+}
+
+.visual-bars span:nth-child(1) {
+  height: 25%;
+  background: var(--rose);
+}
+
+.visual-bars span:nth-child(2) {
+  height: 45%;
+}
+
+.visual-bars span:nth-child(3) {
+  height: 38%;
+}
+
+.visual-bars span:nth-child(4) {
+  height: 65%;
+}
+
+.visual-bars span:nth-child(5) {
+  height: 82%;
+}
+
+
+/* ========================================
+   ANIMATED LINE CHART
+   ======================================== */
+
+.visual-chart {
+  top: 37px;
+  right: 0;
+
+  width: 132px;
+  height: 72px;
+
+  padding: 10px;
+
+  overflow: hidden;
+}
+
+.visual-chart svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+}
+
+
+/* Animated squiggly line */
+
+.animated-chart-line {
+  fill: none;
+
+  stroke: url(#chartGradient);
+  stroke-width: 2;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+
+  animation: draw-chart 1.8s ease forwards;
+}
+
+
+/* Data points */
+
+.chart-point {
+  fill: #ffffff;
+
+  stroke: var(--accent);
+  stroke-width: 1.8;
+
+  opacity: 0;
+
+  transform-box: fill-box;
+  transform-origin: center;
+
+  animation: reveal-point 300ms ease forwards;
+}
+
+
+/* Make the dots appear progressively */
+
+.point-1 {
+  animation-delay: 0.35s;
+}
+
+.point-2 {
+  animation-delay: 0.6s;
+}
+
+.point-3 {
+  animation-delay: 0.85s;
+}
+
+.point-4 {
+  animation-delay: 1.1s;
+}
+
+.point-5 {
+  animation-delay: 1.35s;
+}
+
+.point-6 {
+  animation-delay: 1.6s;
+}
+
+
+/* Draw line */
+
+@keyframes draw-chart {
+
+  from {
+    stroke-dashoffset: 260;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+
+}
+
+
+/* Pop each data point into view */
+
+@keyframes reveal-point {
+
+  0% {
+    opacity: 0;
+
+    transform: scale(0);
+  }
+
+  70% {
+    opacity: 1;
+
+    transform: scale(1.25);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .animated-chart-line {
+    animation: none;
+
+    stroke-dashoffset: 0;
+  }
+
+  .chart-point {
+    animation: none;
+
+    opacity: 1;
+  }
+
+}
+
+
+/* TABLE */
+
+.visual-table {
+  bottom: 0;
+  left: 24px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 4px;
+
+  width: 92px;
+  height: 48px;
+
+  padding: 12px;
+}
+
+.visual-table div {
+  height: 12px;
+
+  background: var(--accent-soft);
+
+  border-radius: 2px;
+}
+
+
+/* DONUT */
+
+.visual-circle {
+  position: absolute;
+
+  right: 24px;
+  bottom: -3;
+
+  width: 62px;
+  height: 62px;
+}
+
+.visual-circle svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+
+.donut-base,
+.donut-segment {
+  fill: none;
+
+  stroke-width: 10;
+}
+
+.donut-base {
+  stroke: var(--accent-soft);
+}
+
+.donut-segment {
+  stroke-linecap: butt;
+}
+
+.donut-blue {
+  stroke: var(--accent);
+
+  stroke-dasharray: 28 72;
+  stroke-dashoffset: 0;
+}
+
+.donut-rose {
+  stroke: var(--rose);
+
+  stroke-dasharray: 30 70;
+  stroke-dashoffset: -28;
+}
+
+.donut-gold {
+  stroke: var(--gold);
+
+  stroke-dasharray: 20 80;
+  stroke-dashoffset: -58;
+}
+
+
+
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 1050px) {
+
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-visual {
+    width: 230px;
+    height: 155px;
+
+    margin: 25px auto 0;
+
+    align-self: center;
+
+    transform: none;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .intro {
+    display: block;
+
+    padding-top: 5px;
+  }
+
+  .intro h1 {
+    font-size: 2.3rem;
+  }
+
+  .intro-action-row {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+
+
+  .intro-visual {
+    width: 200px;
+    height: 125px;
+
+    margin: 20px auto 0;
+
+    transform: scale(0.72);
+  }
+
+}
+.sample-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 16px;
+
+  color: #fff;
+
+  background: linear-gradient(
+    110deg,
+    var(--accent),
+    var(--rose)
+  );
+
+  border-radius: 7px;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  box-shadow: 0 5px 15px rgba(85, 125, 166, 0.12);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.sample-link:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(85, 125, 166, 0.18);
+}
+
+.estimate-text-link {
+  color: var(--text);
+
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.estimate-text-link:hover {
+  color: var(--accent);
+}

@@ -1,0 +1,80 @@
+.contact-cta {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 25px;
+  padding: 18px 22px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(86, 131, 173, 0.12),
+    rgba(185, 101, 122, 0.09),
+    rgba(201, 161, 92, 0.12)
+  );
+
+  border-radius: 9px;
+}
+
+.contact-cta strong {
+  color: var(--ink);
+
+  font-size: 0.8rem;
+}
+
+.contact-cta p {
+  margin: 4px 0 0;
+
+  color: var(--text);
+
+  font-size: 0.7rem;
+}
+
+.contact-buttons {
+  display: flex;
+
+  gap: 10px;
+}
+
+.contact-buttons a {
+  padding: 9px 15px;
+
+  border-radius: 6px;
+
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.cta-primary {
+  color: white;
+
+  background: linear-gradient(
+    90deg,
+    var(--rose),
+    var(--coral)
+  );
+}
+
+.cta-secondary {
+  color: var(--ink);
+
+  background: rgba(255, 255, 255, 0.5);
+
+  border: 1px solid rgba(185, 101, 122, 0.5);
+}
+
+
+@media (max-width: 700px) {
+
+  .contact-cta {
+    display: block;
+  }
+
+  .contact-buttons {
+    margin-top: 16px;
+  }
+
+}
