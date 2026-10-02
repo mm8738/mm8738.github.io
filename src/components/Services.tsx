@@ -194,7 +194,7 @@ function Services() {
 
             <a
               className="modal-cta"
-              href={`mailto:YOUR_EMAIL?subject=${encodeURIComponent(
+              href={`mailto:info@monicamendoza.ca?subject=${encodeURIComponent(
                 selectedService.title + " inquiry"
               )}`}
             >
