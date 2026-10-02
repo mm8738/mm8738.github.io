@@ -103,13 +103,14 @@
 .links {
   display: flex;
   flex-wrap: wrap;
+  flex-direction:column;
 
   justify-content: center;
   align-items: center;
 
-  gap: 18px;
+  gap: 14px;
 
-  margin-top: 45px;
+  margin-top: 30px;
 }
 
 .links a {
@@ -139,7 +140,26 @@
   width: 17px;
   height: 17px;
 }
+.links .services-link {
+  color: var(--accent);
 
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  border-bottom: 1px solid transparent;
+
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.links .services-link:hover {
+  color: var(--rose);
+  border-color: var(--rose);
+
+  transform: translateX(2px);
+}
 
 /* ========================================
    EMAIL BUTTON
@@ -182,13 +202,13 @@
    ======================================== */
 
 .sidebar section {
-  margin-top: 58px;
+  margin-top: 36px;
 }
 
 .section-title {
   display: block;
 
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 
   text-align: center;
 
@@ -252,7 +272,47 @@
   );
 }
 
+.typewriter {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 
+  min-height: 24px;
+  margin: 10px 0 0;
+
+  color: var(--ink);
+
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.typewriter-prefix {
+  margin-right: 4px;
+}
+
+.typewriter-word {
+  color: var(--rose);
+  font-weight: 600;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+
+  width: 1px;
+  height: 0.95em;
+
+  margin-left: 3px;
+
+  background: var(--accent);
+
+  animation: cursor-blink 0.8s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
 /* ========================================
    MOBILE
    ======================================== */
