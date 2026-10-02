@@ -625,12 +625,24 @@
   /* EYEBROW */
 
   .eyebrow {
-    margin-bottom: 17px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+}
 
-    font-size: 0.58rem;
+.intro-subtitle {
+  font-size: 1rem;
+  line-height: 1.65;
+}
 
-    letter-spacing: 0.14em;
-  }
+.intro-tags span {
+  font-size: 0.75rem;
+}
+
+.sample-link,
+.primary-button,
+.book-call {
+  font-size: 0.9rem;
+}
 
 
   /* HEADLINE */
@@ -645,26 +657,7 @@
   }
 
 
-  /* SUBTITLE */
-
-  .intro-subtitle {
-    max-width: 100%;
-
-    margin-top: 21px;
-
-    font-size: 0.9rem;
-    line-height: 1.65;
-  }
-
-
-  /* TAGS */
-
-  .intro-tags {
-    gap: 6px;
-
-    margin-top: 19px;
-  }
-
+  
 
   /* ACTIONS */
 
@@ -679,13 +672,7 @@
   margin-top: 27px;
 }
 
-  .sample-link,
-  .primary-button,
-  .book-call {
-    width: 100%;
 
-    min-height: 45px;
-  }
 
   .estimate-text-link {
     margin-top: 17px;
