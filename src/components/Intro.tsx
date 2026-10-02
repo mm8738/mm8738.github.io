@@ -3,63 +3,10 @@ import "../assets/styles/Intro.scss";
 function Intro() {
   return (
     <section className="intro">
-
       <div className="intro-copy">
-        <span className="eyebrow">
-          FREELANCE DATA ANALYSIS
-        </span>
 
-        <h1>
-          I help small teams
-          <br />
-          make sense of messy data.
-        </h1>
-
-        <p className="intro-subtitle">
-          Practical data help for small businesses, research projects
-          and growing teams.
-        </p>
-
-       <div className="intro-tags">
-  <span>Dashboards</span>
-  <span>Excel / CSV cleanup</span>
-  <span>Reporting</span>
-  <span>Data visualization</span>
-  <span>Analysis</span>
-</div>
-
-        <div className="intro-action-row">
-  <a
-    className="sample-link"
-    href="mailto:YOUR_EMAIL?subject=Data project inquiry"
-  >
-    Send me a sample
-    <span>→</span>
-  </a>
-  <a className="estimate-text-link" href="#services">
-  View services & pricing →
-</a>
-
-</div>
-      </div>
-
-
-      <div className="intro-visual" aria-hidden="true">
-
-        <div className="visual-window visual-bars">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-       <div className="visual-window visual-chart">
-
-  <svg
-    viewBox="0 0 150 70"
-    preserveAspectRatio="none"
-  >
+        <div className="intro-line-chart" aria-hidden="true">
+  <svg viewBox="0 0 420 80">
     <defs>
       <linearGradient
         id="chartGradient"
@@ -68,85 +15,97 @@ function Intro() {
         x2="100%"
         y2="0%"
       >
-        <stop offset="0%" stopColor="#5683ad" />
-        <stop offset="45%" stopColor="#8fb4d2" />
-        <stop offset="70%" stopColor="#c8796f" />
-        <stop offset="100%" stopColor="#c9a15c" />
+        <stop offset="0%" stopColor="#8fb7d8" />
+        <stop offset="58%" stopColor="#8fb7d8" />
+        <stop offset="78%" stopColor="#d5967e" />
+        <stop offset="100%" stopColor="#b9657a" />
       </linearGradient>
+
+      <clipPath id="chartReveal">
+        <rect
+          className="chart-reveal"
+          x="0"
+          y="0"
+          width="420"
+          height="80"
+        />
+      </clipPath>
     </defs>
 
-    <path
-      className="animated-chart-line"
-      d="
-        M 5 55
-        C 15 55, 20 48, 30 48
-        S 43 58, 52 45
-        S 65 25, 75 38
-        S 88 53, 98 35
-        S 110 42, 120 27
-        S 135 25, 145 10
-      "
-    />
+    <g clipPath="url(#chartReveal)">
+      <polyline
+        className="chart-line"
+        points="
+          10,60
+          55,45
+          95,53
+          135,28
+          175,49
+          215,25
+          255,42
+          295,20
+          335,31
+          375,14
+          410,8
+        "
+      />
 
-    <circle className="chart-point point-1" cx="30" cy="48" r="2.8" />
-    <circle className="chart-point point-2" cx="52" cy="45" r="2.8" />
-    <circle className="chart-point point-3" cx="75" cy="38" r="2.8" />
-    <circle className="chart-point point-4" cx="98" cy="35" r="2.8" />
-    <circle className="chart-point point-5" cx="120" cy="27" r="2.8" />
-    <circle className="chart-point point-6" cx="145" cy="10" r="2.8" />
-
+      <circle className="chart-dot" cx="10" cy="60" r="4" />
+      <circle className="chart-dot" cx="55" cy="45" r="4" />
+      <circle className="chart-dot" cx="95" cy="53" r="4" />
+      <circle className="chart-dot" cx="135" cy="28" r="4" />
+      <circle className="chart-dot" cx="175" cy="49" r="4" />
+      <circle className="chart-dot" cx="215" cy="25" r="4" />
+      <circle className="chart-dot" cx="255" cy="42" r="4" />
+      <circle className="chart-dot" cx="295" cy="20" r="4" />
+      <circle className="chart-dot" cx="335" cy="31" r="4" />
+      <circle className="chart-dot" cx="375" cy="14" r="4" />
+      <circle className="chart-dot" cx="410" cy="8" r="4" />
+    </g>
   </svg>
-
 </div>
 
-        <div className="visual-window visual-table">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <span className="eyebrow">
+          LESS CHAOS · MORE CLARITY
+        </span>
+
+        <h1>
+          From data disaster
+          <br />
+          to data that delivers
+        </h1>
+
+        <p className="intro-subtitle">
+          I offer practical business intelligence support to growing startups,
+          research projects and specialized teams.
+        </p>
+
+        <div className="intro-tags">
+          <span>Dashboards</span>
+          <span>Excel / CSV cleanup</span>
+          <span>Reporting</span>
+          <span>Data visualization</span>
+          <span>Analysis</span>
         </div>
 
-<div className="visual-circle">
-  <svg viewBox="0 0 42 42" aria-hidden="true">
+        <div className="intro-action-row">
+          <a
+            className="sample-link"
+            href="mailto:info@monicamendoza.ca?subject=Data project inquiry"
+          >
+            Send me a sample
+            <span>→</span>
+          </a>
+        </div>
 
-    <circle
-      className="donut-base"
-      cx="21"
-      cy="21"
-      r="15.9155"
-    />
-
-    <circle
-      className="donut-segment donut-blue"
-      cx="21"
-      cy="21"
-      r="15.9155"
-      pathLength="100"
-    />
-
-    <circle
-      className="donut-segment donut-rose"
-      cx="21"
-      cy="21"
-      r="15.9155"
-      pathLength="100"
-    />
-
-    <circle
-      className="donut-segment donut-gold"
-      cx="21"
-      cy="21"
-      r="15.9155"
-      pathLength="100"
-    />
-
-  </svg>
-</div>
+        <a
+          className="estimate-text-link"
+          href="#services"
+        >
+          View services & pricing →
+        </a>
 
       </div>
-
     </section>
   );
 }
