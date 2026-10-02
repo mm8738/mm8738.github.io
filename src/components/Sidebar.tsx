@@ -1,6 +1,7 @@
 
 import monica from "../assets/images/monica.jpg";
 import "../assets/styles/Sidebar.scss";
+import Typewriter from "./Typewriter";
 
 function Sidebar() {
   return (
@@ -12,21 +13,24 @@ function Sidebar() {
       />
 
       <h1>Monica Mendoza</h1>
-
-      <p className="role">
+	  <Typewriter />
+	  {
+/*       <p className="role">
         Data analysis · visualization · strategy
-      </p>
+</p> */}
 
       <p className="location">Ottawa, ON</p>
 
 <div className="links">
-  <a href="#services">Services</a>
-  <a href="#capabilities">Capabilities</a>
-  <a href="#about">About</a>
+
+  <a href="#services" className="services-link">Services</a>
+  <a href="#data-types" className="services-link">What you can send me</a>
+  <a href="#capabilities" className="services-link">Capabilities</a>
+
 
   <a
     className="email"
-    href="mailto:YOUR_EMAIL"
+    href="mailto:info@monicamendoza.ca"
   >
     email me →
   </a>
