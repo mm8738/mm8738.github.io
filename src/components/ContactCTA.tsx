@@ -17,14 +17,14 @@ function ContactCTA() {
 
         <a
           className="cta-primary"
-          href="mailto:YOUR_EMAIL?subject=Data sample"
+          href="mailto:info@monicamendoza.ca?subject=Data sample"
         >
           Send me a sample →
         </a>
 
         <a
           className="cta-secondary"
-          href="mailto:YOUR_EMAIL?subject=Estimate request"
+          href="mailto:info@monicamendoza.ca?subject=Estimate request"
         >
           Request an estimate
         </a>
