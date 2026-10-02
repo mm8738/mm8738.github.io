@@ -25,7 +25,7 @@ const dataTypes = [
 
 function DataTypes() {
   return (
-    <section className="data-types">
+    <section className="data-types" id="data-types">
 
       <div className="data-types-heading">
         <span className="section-label">
