@@ -40,9 +40,9 @@ function Sidebar() {
         <span className="section-title">About</span>
 
         <p>
-          I work with complex and messy data to find patterns,
+          I have over 10 years of experience working with complex and messy data to find patterns,
           answer questions, create useful visualizations and turn
-          analysis into something people can actually use.
+          analysis into something people can actually use. Let's connect!
         </p>
       </section>
 
