@@ -194,14 +194,23 @@ function Services() {
               </div>
             </div>
 
-            <a
-              className="modal-cta"
-              href={`mailto:info@monicamendoza.ca?subject=${encodeURIComponent(
-                selectedService.title + " inquiry"
-              )}`}
-            >
-              Ask about this service <span>→</span>
-            </a>
+<a
+  className="modal-cta"
+  href={`mailto:info@monicamendoza.ca?subject=${encodeURIComponent(
+    selectedService.title + " inquiry"
+  )}&body=${encodeURIComponent(
+    `Hi Monica,
+
+I'm interested in ${selectedService.title}.
+
+Here's what I'm looking for help with:
+
+
+Important: Please don't attach files containing sensitive or regulated personal information. If you're unsure, send this email without the attachment and we'll figure out the best next step.`
+  )}`}
+>
+  Ask about this service <span>→</span>
+</a>
           </div>
         </div>
       )}
