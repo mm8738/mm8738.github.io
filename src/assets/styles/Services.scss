@@ -487,6 +487,16 @@
 
   line-height: 1.7;
 }
+.custom-projects {
+  margin: 30px auto 0;
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+  line-height: 1.6;
+
+  text-align: center;
+}
 
 
 /* ========================================
@@ -549,28 +559,146 @@
    MOBILE
    ======================================== */
 
+/* ========================================
+   MOBILE
+   ======================================== */
+
 @media (max-width: 700px) {
 
   .services {
-    padding: 45px 0 50px;
+    padding: 42px 22px 48px;
   }
+
+  /* Section heading */
 
   .section-heading-row {
     display: block;
 
-    margin-bottom: 24px;
+    max-width: 360px;
+
+    margin: 0 auto 26px;
+
+    text-align: center;
+  }
+
+  .section-label {
+    font-size: 0.76rem;
+    letter-spacing: 0.15em;
   }
 
   .section-heading-row p {
-    max-width: none;
+    max-width: 340px;
 
-    margin-top: 10px;
+    margin: 14px auto 0;
 
-    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.55;
+
+    text-align: center;
   }
+
+
+  /* Cards */
 
   .services-grid {
-    gap: 14px;
+    grid-template-columns: 1fr;
+
+    gap: 16px;
   }
 
+  .service-card {
+    padding: 22px 20px 23px;
+  }
+
+
+  /* Card header */
+
+  .service-heading {
+    gap: 13px;
+
+    margin-bottom: 15px;
+  }
+
+  .service-icon {
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    font-size: 1.15rem;
+  }
+
+  .service-card h3 {
+    margin-bottom: 4px;
+
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .service-price {
+    font-size: 0.7rem;
+  }
+
+
+  /* Description */
+
+  .service-card > p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+
+  /* Learn more */
+
+  .service-link {
+    margin-top: 15px;
+
+    font-size: 0.78rem;
+  }
+
+
+  /* Modal */
+
+  .service-modal-backdrop {
+    padding: 15px;
+  }
+
+  .service-modal {
+    max-height: 88vh;
+
+    padding: 30px 22px 26px;
+  }
+
+  .service-modal h2 {
+    font-size: 1.55rem;
+  }
+
+  .modal-intro {
+    font-size: 0.95rem;
+  }
+
+  .modal-details p,
+  .modal-details li,
+  .detail-block p,
+  .detail-block li {
+    font-size: 0.9rem;
+  }
+
+  .modal-eyebrow,
+  .detail-label {
+    font-size: 0.7rem;
+  }
+
+  .modal-cta,
+  .estimate-link {
+    font-size: 0.85rem;
+  }
+    .custom-projects {
+    max-width: 340px;
+
+    margin: 24px auto 0;
+
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
 }
