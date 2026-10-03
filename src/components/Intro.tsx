@@ -89,13 +89,24 @@ function Intro() {
         </div>
 
         <div className="intro-action-row">
-          <a
-            className="sample-link"
-            href="mailto:info@monicamendoza.ca?subject=Data project inquiry"
-          >
-            Send me a sample
-            <span>→</span>
-          </a>
+<a
+  className="sample-link"
+  href={`mailto:info@monicamendoza.ca?subject=${encodeURIComponent(
+    "Data project inquiry"
+  )}&body=${encodeURIComponent(
+    `Hi Monica,
+
+I have attached a sample of the data I would like help with.
+
+What I am looking for help with:
+
+
+Important: Please do not attach files containing sensitive or regulated personal information. If you are unsure, send this email without the attachment and we can figure out the best next step.`
+  )}`}
+>
+  Send me a sample
+  <span>→</span>
+</a>
         </div>
 
         <a
