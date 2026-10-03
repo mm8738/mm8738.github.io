@@ -97,11 +97,7 @@ function Services() {
         <div className="section-heading-row">
           <span className="section-label">SERVICES</span>
 
-          <p>
-            Have something different in mind?
-            <br />
-            I also take on custom analysis and technical projects.
-          </p>
+
         </div>
 
         <div className="services-grid">
@@ -131,7 +127,13 @@ function Services() {
               </button>
             </article>
           ))}
+
         </div>
+		  		          <p>
+            Have something different in mind?
+            <br />
+            I also take on custom projects larger in scope. Let's chat!
+          </p>
       </section>
 
       {selectedService && (
