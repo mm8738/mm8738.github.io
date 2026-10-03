@@ -28,21 +28,24 @@ function Sidebar() {
   <a href="#capabilities" className="services-link">Capabilities</a>
 
 
-  <a
-    className="email"
-    href="mailto:info@monicamendoza.ca"
-  >
-    email me →
-  </a>
+<a
+  className="email"
+  href={`mailto:info@monicamendoza.ca?body=${encodeURIComponent(
+    `
+Important: Please do not attach files containing sensitive or regulated personal information. If you are unsure, send this email without the attachment and we can figure out the best next step.`
+  )}`}
+>
+  email me →
+</a>
 </div>
 
       <section>
         <span className="section-title">About</span>
 
         <p>
-          I have over 10 years of experience working with complex and messy data to find patterns,
+          I work with complex and messy data to find patterns,
           answer questions, create useful visualizations and turn
-          analysis into something people can actually use. Let's connect!
+          analysis into something people can actually use.
         </p>
       </section>
 
